@@ -1,0 +1,4 @@
+services:
+#    wcs_atelier.example:
+#        class: WCS\AtelierBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

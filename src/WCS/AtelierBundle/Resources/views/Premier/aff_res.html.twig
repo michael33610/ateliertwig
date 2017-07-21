@@ -1,0 +1,52 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}WCSAtelierBundle:Premier:affRes{% endblock %}
+
+{% block body %}
+<h1>Welcome to the Premier:affRes page</h1>
+
+	chaine1 : {{ chaine1 }}
+	<br>
+	chaine2 : {{ chaine2 }}
+	<br>
+	{% set dif = (chaine2|length)-(chaine1|length)%}
+	{% if dif < 0 %}
+		{% set dif=dif*(-1) %}
+		{% set taille=chaine2|length %}
+	{% else %}
+		{% set taille=chaine1|length %}		
+	{% endif %}
+	taille= {{taille-1}}
+	dif   =  {{dif}}
+	<br>
+
+ 	<table>
+		<thead>
+			<td>chaine 1</td>
+			<td>chaine 2</td>
+			<td>position</td>
+			<td>différences</td>
+		</thead>
+	{% for i in 0..taille-1 %}
+		<tbody>
+			<tr>
+				<td>
+				{{ chaine1|slice(i,1) }}
+				</td>
+				<td>
+				{{ chaine2|slice(i,1) }}
+				</td>
+				<td>
+				{{i}}
+				</td>
+			</tr>
+		</tbody>
+		{% if chaine1|slice(i,1) != chaine2|slice(i,1) %}
+		{% set dif=dif+1 %}
+		{% endif %}
+	{% endfor %}
+	</table>
+	<br>
+differences {{dif}}
+{% endblock %}
+ 

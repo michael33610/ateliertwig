@@ -1,0 +1,4 @@
+wcs_atelier:
+    resource: "@WCSAtelierBundle/Resources/config/routing.yml"
+    prefix:   /
+

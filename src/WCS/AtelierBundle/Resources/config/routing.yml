@@ -1,0 +1,11 @@
+wcs_atelier_homepage:
+    path:     /
+    defaults: { _controller: WCSAtelierBundle:Default:index }
+
+aff:
+    path:     /aff
+    defaults: { _controller: WCSAtelierBundle:Premier:aff }
+
+aff_res:
+    path:     /affRes/{chaine1}/{chaine2}
+    defaults: { _controller: WCSAtelierBundle:Premier:affRes }

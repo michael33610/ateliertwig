@@ -1,0 +1,14 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}WCSAtelierBundle:Premier:aff{% endblock %}
+
+{% block body %}
+<h1>Welcome to the Premier:aff page</h1>
+
+
+    {{ form_start(aff_form) }}
+        {{ form_widget(aff_form) }}
+
+    {{ form_end(aff_form) }}
+
+{% endblock %}
